@@ -16,7 +16,7 @@ app.use(cors());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/service", serviceRoutes);
-app.use("/api/service-status", serviceStatusRoutes); // Fixed duplicate route issue
+app.use("/api/service-status", serviceStatusRoutes);
 
-// Export for Vercel
+// Fix: Export the Express app for Vercel
 module.exports = app;

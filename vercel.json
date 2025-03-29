@@ -3,12 +3,7 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "dist/**"
-        ]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -16,5 +11,8 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://project:c3i9t20y25f6i9x24@cluster0.k46yxvm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  }
 }

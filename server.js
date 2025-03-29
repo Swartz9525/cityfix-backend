@@ -16,7 +16,7 @@ app.use(cors());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/service", serviceRoutes);
-app.use("/api/service", serviceStatusRoutes);
+app.use("/api/service-status", serviceStatusRoutes); // Fixed duplicate route issue
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Export for Vercel
+module.exports = app;

@@ -19,4 +19,8 @@ app.use("/api/service", serviceRoutes);
 app.use("/api/service-status", serviceStatusRoutes);
 
 // Fix: Export the Express app for Vercel
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 module.exports = app;
